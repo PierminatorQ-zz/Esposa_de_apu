@@ -5,5 +5,19 @@
   <%= @baby.name %>
 </p>
 
+<table>
+  <thead>
+    <tr>Cantidad de veces que tomò hoy</tr>
+    <tr>Fecha ultima vez que tomò hoy</tr>
+    <tr>Cuanto tiempo ha tomado hoy</tr>
+    <tr>Cuanta cantidad ha tomado hoy</tr>
+  </thead>
+  <tbody>
+    <td><%= @baby.breast_feeding_times_today %></td>
+    <td><%= @baby.last_time_today %></td>
+    <td><%= @baby.breast_feeding_duration_today %></td>
+    <td><%= @baby.breast_feeding_quantity_today %></td>
+  </tbody>
+</table>
 <%= link_to 'Edit', edit_baby_path(@baby) %> |
 <%= link_to 'Back', babies_path %>
