@@ -31,7 +31,7 @@ class Baby < ApplicationRecord
         def last_time_today
             
             #show a empty data if doesn exist any last record
-            if breast_feedings > 0
+            if breast_feedings.count > 0
             breast_feedings.last.created_at
             else
                 ""

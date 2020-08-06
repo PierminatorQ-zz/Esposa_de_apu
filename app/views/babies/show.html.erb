@@ -5,6 +5,13 @@
   <%= @baby.name %>
 </p>
 
+  <ul>  
+      <% @baby.breast_feedings.each do |bf|%>
+      <li> Cantidad: <%= bf.quantity %>, Duraciòn: <%= bf.duration %>, Fecha <%= bf.created_at%> </li>
+      <% end %>
+  </ul>
+
+
 <table>
   <thead>
     <tr>Cantidad de veces que tomò hoy</tr>
