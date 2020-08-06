@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Breast Feedings</h1>
+<h1 class="is-size-4">Breast Feedings</h1>
 
-<table>
+<table class="table is-bordered is-hoverable mt-5">
   <thead>
     <tr>
       <th>Duration</th>
@@ -18,9 +18,9 @@
         <td><%= breast_feeding.duration %></td>
         <td><%= breast_feeding.quantity %></td>
         <td><%= breast_feeding.baby %></td>
-        <td><%= link_to 'Show', breast_feeding %></td>
-        <td><%= link_to 'Edit', edit_breast_feeding_path(breast_feeding) %></td>
-        <td><%= link_to 'Destroy', breast_feeding, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', breast_feeding, class:"tag is-danger is-light" %></td>
+        <td><%= link_to 'Edit', edit_breast_feeding_path(breast_feeding), class:"tag is-danger is-light" %></td>
+        <td><%= link_to 'Destroy', breast_feeding, method: :delete, data: { confirm: 'Are you sure?' }, class:"tag is-danger is-light" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Breast Feeding', new_breast_feeding_path %>
+<%= link_to 'New Breast Feeding', new_breast_feeding_path, class:"button is-danger is-outlined" %>

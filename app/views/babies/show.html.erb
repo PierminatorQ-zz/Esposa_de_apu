@@ -1,20 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
+<p class="title is-3">
+  <strong>Nombre:</strong>
   <%= @baby.name %>
 </p>
 
-  <ul>  
+  <ul class="my-5">  
       <% @baby.breast_feedings.each do |bf|%>
       <li> Cantidad: <%= bf.quantity %>, Duraciòn: <%= bf.duration %>, Fecha <%= bf.created_at%> </li>
       <% end %>
   </ul>
 
 
-<table>
+<table class="table">
   <thead>
-    <tr>Cantidad de veces que tomò hoy</tr>
+    <tr>Cantidad de veces</tr>
     <tr>Fecha ultima vez que tomò hoy</tr>
     <tr>Cuanto tiempo ha tomado hoy</tr>
     <tr>Cuanta cantidad ha tomado hoy</tr>
